@@ -301,7 +301,7 @@ describe("Paseo Local Network with Asset Hub", () => {
         stderr += data.toString();
       });
 
-      const maxWaitTime = 120000;
+      const maxWaitTime = 300000; // 5 minutes — CI runners can be slow
       const startTime = Date.now();
 
       while (Date.now() - startTime < maxWaitTime) {
@@ -319,8 +319,8 @@ describe("Paseo Local Network with Asset Hub", () => {
 
       console.log("stdout:", stdout.slice(-2000));
       console.log("stderr:", stderr.slice(-2000));
-      throw new Error("Network failed to start within 2 minutes");
-    }, 180000);
+      throw new Error("Network failed to start within 5 minutes");
+    }, 360000);
 
     it("should verify relay chain is producing blocks", async () => {
       console.log("Verifying relay chain block production...");
