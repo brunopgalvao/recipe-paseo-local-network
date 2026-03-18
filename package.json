@@ -1,0 +1,25 @@
+{
+  "name": "recipe-paseo-local-network",
+  "version": "1.0.0",
+  "description": "Paseo local relay chain + Asset Hub network with Zombienet",
+  "type": "module",
+  "scripts": {
+    "zombienet": "zombienet spawn configs/network.toml --provider native",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "polkadot",
+    "paseo",
+    "asset-hub",
+    "zombienet",
+    "blockchain"
+  ],
+  "author": "",
+  "license": "MIT OR Apache-2.0",
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.9"
+  }
+}
